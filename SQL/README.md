@@ -43,14 +43,20 @@ SELECT NAME FROM CITY WHERE COUNTRYCODE = 'JPN';
 SELECT CITY, STATE FROM STATION;
 ```
 
-**8. Weather Observation Station 3**
+**8. Weather Observation Station 2**
+```
+SELECT ROUND(SUM(LAT_N), 2), ROUND(SUM(LONG_W), 2) FROM STATION;
+```
+
+
+**9. Weather Observation Station 3**
 
 ```
 SELECT DISTINCT CITY FROM STATION WHERE MOD(STATION.ID,2)=0 ORDER BY CITY;
 ```
 
-**9. Weather Observation Station 4**
+**10. Weather Observation Station 4**
 
 ```
-SELECT (count(CITY) - count(DISTINCT CITY)) FROM STATION;
+SELECT (COUNT(CITY) - COUNT(DISTINCT CITY)) FROM STATION;
 ```
