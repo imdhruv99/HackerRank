@@ -99,17 +99,23 @@ SELECT DISTINCT CITY FROM STATION WHERE CITY NOT REGEXP '^*[aeiou]$';
 SELECT DISTINCT CITY FROM STATION WHERE CITY NOT REGEXP '^[aeiou].*[aeiou]$';
 ```
 
-**18. Higher Than 75 Marks**
+**18. Weather Observation Station 12**
+```
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '^[^aeiouAEIOU]' AND CITY REGEXP '[^aeiouAEIOU]$';
+```
+
+**19. Higher Than 75 Marks**
 ```
 SELECT Name FROM STUDENTS WHERE Marks > 75 ORDER BY RIGHT(Name, 3), ID;
 ```
 
-**19. Employee Names**
+**20. Employee Names**
 ```
 SELECT name FROM Employee ORDER BY name ASC;
 ```
 
-**20. Employee Salaries**
+**21. Employee Salaries**
 ```
 SELECT name FROM Employee WHERE salary > 2000 AND months < 10 ORDER BY employee_id ASC;
 ```
+
