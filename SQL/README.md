@@ -125,3 +125,15 @@ SELECT CONCAT(NAME,'(',SUBSTR(OCCUPATION,1,1),')') AS N FROM OCCUPATIONS ORDER B
 
 SELECT CONCAT('There are a total of ',COUNT(OCCUPATION),' ',LOWER(OCCUPATION),'s.') FROM OCCUPATIONS GROUP BY OCCUPATION ORDER BY COUNT(OCCUPATION), OCCUPATION;
 ```
+
+**23. Types of Triangle**
+```
+SELECT 
+    CASE
+        WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle'
+        WHEN A = B AND B = C THEN 'Equilateral'
+        WHEN A = B OR B = C OR A = C THEN 'Isosceles'
+        ELSE 'Scalene'
+    END
+FROM TRIANGLES;
+```
